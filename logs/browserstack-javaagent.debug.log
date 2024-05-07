@@ -1,0 +1,430 @@
+11:17:52.903 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.19.1
+11:17:52.915 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 9.2.2
+11:17:53.600 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {}
+11:17:53.611 [main] INFO  c.browserstack.utils.UtilityMethods - BrowserStack Yml Detected : E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\browserstack.yml
+11:17:53.867 [main] INFO  c.b.config.BrowserStackConfig - Detected Framework testng
+11:17:53.890 [main] INFO  c.b.config.BrowserStackConfig - Setting value of testObservability as specified in your browserstack.yml to true
+11:17:54.608 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to DEBUG
+11:17:54.608 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO
+11:17:55.019 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Java command - com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket62638 @w@C:\Users\leomo\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\leomo\AppData\Local\Temp\idea_testng.tmp
+11:17:55.019 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Test classes detected: 
+11:17:55.035 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Runner: testng, Engine: none
+11:17:55.114 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Runner: testng, Engine: none from dependencies
+11:17:55.114 [main] DEBUG c.b.utils.FrameworkDetectionUtils - Detected final framework as: testng
+11:17:55.115 [main] DEBUG c.browserstack.BrowserStackJavaAgent - JavaAgent Version 1.13.22
+11:17:55.118 [main] INFO  c.browserstack.BrowserStackJavaAgent - Using app: [bs://300f7fb58161e9f45caa672ac767890ff7ff00b3]
+11:17:55.118 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to testng
+11:17:56.832 [Thread-1] DEBUG c.browserstack.utils.UtilityMethods - NEXT HUBS ARE: ["hub-aps.browserstack.com","hub-euw.browserstack.com","hub-apse.browserstack.com"]
+11:17:57.310 [main] DEBUG c.browserstack.utils.UtilityMethods - EXECUTION TIME OF hub-aps.browserstack.com HUB IS: 472ms
+11:17:58.670 [main] DEBUG c.browserstack.utils.UtilityMethods - EXECUTION TIME OF hub-euw.browserstack.com HUB IS: 1354ms
+11:18:00.469 [main] DEBUG c.browserstack.utils.UtilityMethods - EXECUTION TIME OF hub-apse.browserstack.com HUB IS: 1797ms
+11:18:00.472 [main] DEBUG c.browserstack.utils.UtilityMethods - NEAREST HUB ALLOCATED IS - hub-aps.browserstack.com
+11:18:00.491 [main] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestAttempted with data: {"event_type":"SDKTestAttempted","accessKey":"Jzxt1sh5SNoQhSDZydW3","userName":"montugohain_3dchJw","event_properties":{"product":"[app-automate, observability]","buildName":"bstack-demo","os":"Windows 11","languageVersion":"21.0.1","appiumVersion":"9.2.2","frameworkDetectionInstrumentation":{"parseLoadClass":13,"parseDependencies":78},"language":"java","sdkRunId":"610bb2b4-4e0d-4d1a-b29c-ad33c1dc6439","buildIdentifier":"1","userFramework":"testng","testhub_uuid":"","detectedAppiumVersion":"null","detectedDependencies":"testng","productMap":{"app_automate":true,"accessibility":false,"automate":false,"percy":false,"observability":true},"referrer":"testng-javaagent\/1.13.22","hostname":"DESKTOP-EMO1OC7","language_framework":"java_testng","detectedFramework":"testng","detectedSeleniumVersion":"4.19.1","seleniumVersion":"4.19.1"}}
+11:18:01.184 [main] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestAttempted response - {"message":"SDK Event recorded successfully"}
+11:18:01.184 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+11:18:08.334 [ForkJoinPool.commonPool-worker-1] INFO  c.b.config.BrowserStackConfig - WARN
+11:18:08.473 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:08.470625700Z][ OBSERVABILITY ] Processing Request Kind launchTestSession
+
+11:18:08.476 [main] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/builds
+11:18:10.720 [main] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:18:10.721 [main] DEBUG com.browserstack.testOps.Listener - BROWSERSTACK_TESTHUB_UUID : ceephg84aqzcrgccsjw4dlsnbgj4snhmdojz67lq
+11:18:10.721 [main] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:48:10.721076100Z][ OBSERVABILITY ] Build creation successfull!
+
+11:18:10.721 [main] INFO  c.browserstack.BrowserStackJavaAgent - Starting BrowserStack Local......
+11:18:10.725 [main] DEBUG com.browserstack.LocalFactory - Starting BrowserStack Local with identifier 04_May_1117_DESKTOP_EMO1OC7_QHoy
+11:18:24.623 [main] INFO  com.browserstack.LocalFactory - BrowserStack Local Started Successfully.
+11:18:30.426 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.425590100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.435 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.435152600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.449 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.449893Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.449 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.449893Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.449 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.449893Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.463 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.463966400Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.464 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.464979600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.464 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.464979600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.466 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.466615200Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.466 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.466615200Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.470 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.467506100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.491 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.491831600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.491 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.491831600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.491 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.491831600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.492 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.492831800Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.492 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.492831800Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.501 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.500439900Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.501 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.501439Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.501 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.501439Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.502 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.502437700Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.502 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.502437700Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.502 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.502437700Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.517 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.517614600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.518 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.518612500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.519 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.519621500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.519 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.519621500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.519 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.519621500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.525 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.525657500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.526 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.526757200Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.526 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.526757200Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.527 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.527676600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.527 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.527676600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.527 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.527676600Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.531 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.531199900Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:18:30.531 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.531199900Z][ OBSERVABILITY ] Processing Logs patching stream
+11:18:30.630 [OpenApplication@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunStarted, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:18:30.630 [OpenApplication@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunStarted, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:18:30.630 [OpenApplication@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:18:30.630 [OpenApplication@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:18:30.631 [OpenApplication@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunStarted, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:18:30.631 [OpenApplication@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:18:30.755 [OpenApplication@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:18:30.756 [OpenApplication@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:18:30.756 [OpenApplication@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:18:30.757 [OpenApplication@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:18:30.757 [OpenApplication@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:18:30.758 [OpenApplication@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:18:30.760 [OpenApplication@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.760565700Z][ OBSERVABILITY ] Processing Request Kind HookRunStarted
+
+11:18:30.760 [OpenApplication@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.760565700Z][ OBSERVABILITY ] Processing Request Kind HookRunStarted
+
+11:18:30.765 [OpenApplication@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:30.765118400Z][ OBSERVABILITY ] Processing Request Kind HookRunStarted
+
+11:18:32.435 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:32.435863700Z][ OBSERVABILITY ] Time Since Last Batch Processed 1714801712435
+
+11:18:32.440 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:32.440395700Z][ OBSERVABILITY ] Processing Batch 37
+
+11:18:32.440 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:18:32.746 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:18:32.747 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:48:32.747467700Z][ OBSERVABILITY ] Batch event successfull!
+
+11:18:34.446 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:34.446358Z][ OBSERVABILITY ] Time Since Last Batch Processed 2009
+
+11:18:38.472 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:38.472724600Z][ OBSERVABILITY ] Time Since Last Batch Processed 4026
+
+11:18:42.438 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:42.438870700Z][ OBSERVABILITY ] Time Since Last Batch Processed 3966
+
+11:18:44.449 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:44.449413700Z][ OBSERVABILITY ] Time Since Last Batch Processed 2011
+
+11:18:48.436 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:48.436055700Z][ OBSERVABILITY ] Time Since Last Batch Processed 3987
+
+11:18:50.450 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:50.450193200Z][ OBSERVABILITY ] Time Since Last Batch Processed 2014
+
+11:18:54.439 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:54.439415100Z][ OBSERVABILITY ] Time Since Last Batch Processed 3989
+
+11:18:58.440 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:48:58.440941100Z][ OBSERVABILITY ] Time Since Last Batch Processed 4001
+
+11:19:02.448 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:02.448831900Z][ OBSERVABILITY ] Time Since Last Batch Processed 4008
+
+11:19:06.449 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:06.449657500Z][ OBSERVABILITY ] Time Since Last Batch Processed 4001
+
+11:19:10.448 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:10.448084200Z][ OBSERVABILITY ] Time Since Last Batch Processed 3999
+
+11:19:14.449 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:14.449748800Z][ OBSERVABILITY ] Time Since Last Batch Processed 4001
+
+11:19:18.439 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:18.439431100Z][ OBSERVABILITY ] Time Since Last Batch Processed 3990
+
+11:19:20.448 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:20.448473400Z][ OBSERVABILITY ] Time Since Last Batch Processed 2009
+
+11:19:22.587 [OpenApplication@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:22.587567300Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:24.444 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:24.444351400Z][ OBSERVABILITY ] Time Since Last Batch Processed 3995
+
+11:19:24.444 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:24.444893200Z][ OBSERVABILITY ] Processing Batch 1
+
+11:19:24.444 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:19:24.750 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:19:24.751 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:49:24.751678800Z][ OBSERVABILITY ] Batch event successfull!
+
+11:19:26.469 [OpenApplication@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:26.469405Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:27.236 [OpenApplication@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:27.236610400Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:28.438 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:28.438334200Z][ OBSERVABILITY ] Time Since Last Batch Processed 3994
+
+11:19:28.438 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:28.438334200Z][ OBSERVABILITY ] Processing Batch 2
+
+11:19:28.438 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:19:28.740 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:19:28.740 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:49:28.740066200Z][ OBSERVABILITY ] Batch event successfull!
+
+11:19:30.442 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:30.442692500Z][ OBSERVABILITY ] Time Since Last Batch Processed 2004
+
+11:19:34.441 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:34.441043Z][ OBSERVABILITY ] Time Since Last Batch Processed 3999
+
+11:19:38.450 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:38.450341200Z][ OBSERVABILITY ] Time Since Last Batch Processed 4009
+
+11:19:42.447 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:42.447054Z][ OBSERVABILITY ] Time Since Last Batch Processed 3997
+
+11:19:46.445 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:46.445652400Z][ OBSERVABILITY ] Time Since Last Batch Processed 3998
+
+11:19:48.140 [OpenApplication@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:48.140860200Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:50.439 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:50.439025400Z][ OBSERVABILITY ] Time Since Last Batch Processed 3994
+
+11:19:50.439 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:50.439025400Z][ OBSERVABILITY ] Processing Batch 1
+
+11:19:50.439 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:19:50.745 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:19:50.745 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:49:50.745594700Z][ OBSERVABILITY ] Batch event successfull!
+
+11:19:51.419 [OpenApplication@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:51.419774500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:52.191 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:19:52.193 [Mobile_app_testing-2@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:19:52.210 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:52.210 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:52.236 [Mobile_app_testing-2@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.236009800Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:19:52.237 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunFinished, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:19:52.237 [login_with_mobile_no@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:19:52.264 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:52.264 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:52.291 [login_with_mobile_no@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.291479200Z][ OBSERVABILITY ] Processing Request Kind HookRunFinished
+
+11:19:52.292 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunSkipped, Test ClassName :: FreightSmith.captchaFilling 
+11:19:52.292 [login_with_mobile_no@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:19:52.320 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:52.320 [login_with_mobile_no@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:52.382 [login_with_mobile_no@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.382992900Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:19:52.448 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.448659200Z][ OBSERVABILITY ] Time Since Last Batch Processed 2009
+
+11:19:52.448 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.448659200Z][ OBSERVABILITY ] Processing Batch 4
+
+11:19:52.448 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:19:52.478 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:19:52.478 [Mobile_app_testing-2@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:19:52.506 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:52.506 [Mobile_app_testing-2@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:52.534 [Mobile_app_testing-2@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.534044300Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:19:52.535 [captcha_Filling@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunSkipped, Test ClassName :: FreightSmith.captchaFilling 
+11:19:52.535 [captcha_Filling@2] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:19:52.566 [captcha_Filling@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:52.567 [captcha_Filling@2] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:52.638 [captcha_Filling@2] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.638601400Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:19:52.730 [captcha_Filling@2] DEBUG c.browserstack.utils.LogReportingAPI - sendPlatformDetails: Can't send CBT info, as driver or test is not found
+11:19:52.889 [OpenApplication@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:52.889493500Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:53.029 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:19:53.031 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:49:53.031554Z][ OBSERVABILITY ] Batch event successfull!
+
+11:19:56.223 [OpenApplication@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:56.223189900Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:19:56.435 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:56.435760700Z][ OBSERVABILITY ] Time Since Last Batch Processed 3987
+
+11:19:56.435 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:56.435760700Z][ OBSERVABILITY ] Processing Batch 4
+
+11:19:56.435 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:19:56.438 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:19:56.438 [Mobile_app_testing-0@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:19:56.453 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:19:56.454 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:19:56.467 [Mobile_app_testing-0@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:49:56.467670400Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:19:56.732 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:19:56.733 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:49:56.733000500Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:00.441 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:00.441656700Z][ OBSERVABILITY ] Time Since Last Batch Processed 4006
+
+11:20:00.441 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:00.441656700Z][ OBSERVABILITY ] Processing Batch 1
+
+11:20:00.441 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:00.747 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:00.748 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:00.748722700Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:01.090 [login_with_mobile_no@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:01.090590900Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:01.231 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:20:01.231 [Mobile_app_testing-1@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:01.255 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:01.255 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:01.276 [Mobile_app_testing-1@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:01.276891200Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:20:04.440 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:04.440316200Z][ OBSERVABILITY ] Time Since Last Batch Processed 3999
+
+11:20:04.440 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:04.440316200Z][ OBSERVABILITY ] Processing Batch 2
+
+11:20:04.440 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:04.745 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:04.745 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:04.745856Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:06.450 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:06.450270Z][ OBSERVABILITY ] Time Since Last Batch Processed 2010
+
+11:20:07.294 [login_with_mobile_no@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:07.294751Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:07.998 [login_with_mobile_no@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:07.998528Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:08.079 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunFinished, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:20:08.080 [login_with_mobile_no@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:20:08.097 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:08.097 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:08.108 [login_with_mobile_no@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:08.108534100Z][ OBSERVABILITY ] Processing Request Kind HookRunFinished
+
+11:20:08.108 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunFinished, Test ClassName :: FreightSmith.captchaFilling 
+11:20:08.108 [login_with_mobile_no@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:08.132 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:08.132 [login_with_mobile_no@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:08.148 [login_with_mobile_no@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:08.148106200Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:20:08.230 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:20:08.230 [Mobile_app_testing-0@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:08.257 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:08.257 [Mobile_app_testing-0@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:08.272 [Mobile_app_testing-0@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:08.272659600Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:20:10.447 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:10.447784200Z][ OBSERVABILITY ] Time Since Last Batch Processed 3997
+
+11:20:10.447 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:10.447784200Z][ OBSERVABILITY ] Processing Batch 5
+
+11:20:10.447 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:10.749 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:10.749 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:10.749845900Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:13.887 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:13.887879100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:13.887 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:13.887879100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:14.222 [login_with_mobile_no@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.222023100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:14.297 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: HookRunFinished, Method ClassName :: FreightSmith.BaseTestOpenApp 
+11:20:14.297 [login_with_mobile_no@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\BaseTestOpenApp
+11:20:14.316 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:14.316 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\BaseTestOpenApp.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:14.327 [login_with_mobile_no@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.327829500Z][ OBSERVABILITY ] Processing Request Kind HookRunFinished
+
+11:20:14.327 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunFinished, Test ClassName :: FreightSmith.captchaFilling 
+11:20:14.327 [login_with_mobile_no@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:14.347 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:14.349 [login_with_mobile_no@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:14.368 [login_with_mobile_no@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.368601900Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:20:14.441 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.441622900Z][ OBSERVABILITY ] Time Since Last Batch Processed 3994
+
+11:20:14.441 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.441622900Z][ OBSERVABILITY ] Processing Batch 5
+
+11:20:14.442 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:14.449 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunStarted, Test ClassName :: FreightSmith.captchaFilling 
+11:20:14.449 [Mobile_app_testing-1@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:14.477 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:14.477 [Mobile_app_testing-1@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:14.512 [Mobile_app_testing-1@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:14.512197400Z][ OBSERVABILITY ] Processing Request Kind TestRunStarted
+
+11:20:14.747 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:14.747 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:14.747433300Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:17.003 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:17.003139Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:17.003 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:17.003139Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:17.808 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:17.808810Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:17.890 [captcha_Filling@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunFinished, Test ClassName :: FreightSmith.captchaFilling 
+11:20:17.890 [captcha_Filling@0] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:17.910 [captcha_Filling@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:17.910 [captcha_Filling@0] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:17.922 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:17.922719700Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:20:18.002 [captcha_Filling@0] DEBUG c.browserstack.utils.LogReportingAPI - sendPlatformDetails: Can't send CBT info, as driver or test is not found
+11:20:18.441 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:18.441063500Z][ OBSERVABILITY ] Time Since Last Batch Processed 4000
+
+11:20:18.442 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:18.442570300Z][ OBSERVABILITY ] Processing Batch 5
+
+11:20:18.442 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:18.745 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:18.746 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:18.746927700Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:22.443 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:22.443947100Z][ OBSERVABILITY ] Time Since Last Batch Processed 4001
+
+11:20:24.064 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:24.064393100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:24.064 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:24.064393100Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:26.441 [pool-4-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:26.441711200Z][ OBSERVABILITY ] Time Since Last Batch Processed 3998
+
+11:20:26.441 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:26.441711200Z][ OBSERVABILITY ] Processing Batch 2
+
+11:20:26.441 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:26.746 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:26.747 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:26.747414200Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:26.927 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:26.927843800Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:26.927 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:26.927843800Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:27.054 [captcha_Filling@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Event Type :: TestRunFinished, Test ClassName :: FreightSmith.captchaFilling 
+11:20:27.054 [captcha_Filling@1] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, TestClass :: FreightSmith\captchaFilling
+11:20:27.070 [captcha_Filling@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] The filename fetched :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, fileSeparator :: \, AbsolutePath :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing, File.Separator :: \
+11:20:27.070 [captcha_Filling@1] DEBUG c.b.testNgListeners.TestNGUtils - [populateTestDataForBSTestOps] Replaced File Name is :: Mobile_app_testing\src\test\java\FreightSmith\captchaFilling.java, Absolute Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases\Mobile_app_testing\.., Normalized Path :: E:\Exuber_work\Course_Learnings\Automation_Testing_with_Selenium\Codebases 
+11:20:27.079 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:27.079100700Z][ OBSERVABILITY ] Processing Request Kind TestRunFinished
+
+11:20:27.205 [captcha_Filling@1] DEBUG c.browserstack.utils.LogReportingAPI - sendPlatformDetails: Can't send CBT info, as driver or test is not found
+11:20:30.201 [main] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:30.200467800Z][ OBSERVABILITY ] Processing Request Kind LogCreated
+
+11:20:30.207 [Thread-0] DEBUG c.browserstack.BrowserStackJavaAgent - Starting final execution
+11:20:30.207 [Thread-0] DEBUG c.b.u.ObservabilityUtilityMethods - Processing batch requests with type: Global
+11:20:30.207 [Thread-0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:30.207021300Z][ OBSERVABILITY ] Processing stop observability
+11:20:30.208 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:30.208550Z][ OBSERVABILITY ] Processing Batch 4
+
+11:20:30.208 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: POST api/v1/batch
+11:20:30.507 [pool-5-thread-1] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:30.507 [pool-5-thread-1] DEBUG c.browserstack.utils.LogReportingAPI - 
+[2024-05-04T05:50:30.507049200Z][ OBSERVABILITY ] Batch event successfull!
+
+11:20:30.508 [Thread-0] DEBUG c.browserstack.utils.LogReportingAPI - [2024-05-04T05:50:30.508563800Z][ OBSERVABILITY ] Processing Request Kind stopBuildUpstream
+
+11:20:30.508 [Thread-0] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Sending Observability request: PUT api/v1/builds/ceephg84aqzcrgccsjw4dlsnbgj4snhmdojz67lq/stop
+11:20:30.808 [Thread-0] DEBUG c.browserstack.testOps.RequestUtils - requestToTestOps: Response code: 200
+11:20:30.808 [Thread-0] DEBUG c.browserstack.utils.LogReportingAPI - Observability stop response: 
+11:20:30.808 [Thread-0] INFO  c.browserstack.utils.LogReportingAPI - Visit https://observability.browserstack.com/builds/ceephg84aqzcrgccsjw4dlsnbgj4snhmdojz67lq to view build report, insights, and many more debugging information all at one place!
+
+11:20:35.001 [Thread-0] DEBUG com.browserstack.testOps.UsageStats - [OBSERVABILITY] Failed to parse data from workers
+11:20:35.066 [Thread-0] DEBUG c.b.utils.FunnelInstrumentation - Sending funnel data for SDKTestSuccessful with data: {"event_type":"SDKTestSuccessful","accessKey":"Jzxt1sh5SNoQhSDZydW3","userName":"montugohain_3dchJw","event_properties":{"product":"[app-automate, observability]","buildName":"bstack-demo","os":"Windows 11","languageVersion":"21.0.1","appiumVersion":"9.2.2","frameworkDetectionInstrumentation":{"parseLoadClass":13,"ret-org.openqa.selenium.remote.RemoteWebDriver":4050,"retransformClasses":4057,"parseDependencies":78},"language":"java","sdkRunId":"610bb2b4-4e0d-4d1a-b29c-ad33c1dc6439","buildIdentifier":"1","userFramework":"testng","testhub_uuid":"ceephg84aqzcrgccsjw4dlsnbgj4snhmdojz67lq","detectedAppiumVersion":"null","detectedDependencies":"testng","productMap":{"app_automate":true,"accessibility":false,"automate":false,"percy":false,"observability":true},"referrer":"testng-javaagent\/1.13.22","hostname":"DESKTOP-EMO1OC7","measures":{"local:start":13899,"sdk:setup":32006,"local:stop":4184},"language_framework":"java_testng","detectedFramework":"testng","productUsage":{"testObservability":{"buildHashedId":"ceephg84aqzcrgccsjw4dlsnbgj4snhmdojz67lq","manuallySet":true,"enabled":true,"events":{"hookEvents":{"started":{"failedCount":0,"sentCount":3,"triggeredCount":2},"finished":{"triggeredCount":3,"failedCount":0,"sentCount":3},"passed":{"failedCount":0,"sentCount":2,"triggeredCount":2},"failed":{"failedCount":0,"sentCount":1,"triggeredCount":1}},"logEvents":{"failedCount":0,"sentCount":55,"triggeredCount":55,"log":{"failedCount":0,"sentCount":55,"triggeredCount":55}},"testEvents":{"started":{"failedCount":0,"sentCount":6,"triggeredCount":6},"finished":{"triggeredCount":6,"failedCount":0,"sentCount":6},"passed":{"failedCount":0,"sentCount":4,"triggeredCount":4},"skipped":{"failedCount":0,"sentCount":2,"triggeredCount":2}},"cbtSessionEvents":{"failedCount":0,"sentCount":0,"triggeredCount":0},"buildEvents":{"started":{"error":null,"status":"success","triggered":true},"finished":{"error":null,"status":"success","triggered":true}}}}},"detectedSeleniumVersion":"4.19.1","seleniumVersion":"4.19.1"}}
+11:20:36.056 [Thread-0] DEBUG c.b.utils.FunnelInstrumentation - API Event SDKTestSuccessful response - {"message":"SDK Event recorded successfully"}
+11:20:39.267 [Thread-0] INFO  c.browserstack.utils.UtilityMethods - View build on BrowserStack dashboard: https://app-automate.browserstack.com/dashboard/v2/builds/57d3c2adb55ec0c0ec5607fa11097f135a091ee4
+11:20:39.268 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
