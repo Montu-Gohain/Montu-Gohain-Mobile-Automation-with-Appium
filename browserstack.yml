@@ -13,7 +13,7 @@ accessKey: Jzxt1sh5SNoQhSDZydW3
 # Set 'projectName' to the name of your project. Example, Marketing Website
 projectName: FS app Test
 # Set `buildName` as the name of the job / testsuite being run
-buildName: Montu Testing 1
+buildName: FS test take_3
 # `buildIdentifier` is a unique id to differentiate every execution that gets appended to
 # buildName. Choose your buildIdentifier format from the available expressions:
 # ${BUILD_NUMBER} (Default): Generates an incremental counter with every execution
@@ -22,7 +22,7 @@ buildName: Montu Testing 1
 buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
 # Set `framework` of your test suite. Example, `testng`, `cucumber`, `cucumber-testng`
 # This property is needed to send test context to BrowserStack (test name, status)
-framework: java
+framework: testng
 # =======================================
 # App
 # =======================================

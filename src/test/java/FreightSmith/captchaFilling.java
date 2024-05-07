@@ -8,7 +8,7 @@ public class captchaFilling extends Login {
 
     @Test
     public void captcha_Filling() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         try {
             String captchaText = driver.findElement(By.xpath("//android.widget.TextView")).getText();
             System.out.println(captchaText);
@@ -19,7 +19,7 @@ public class captchaFilling extends Login {
 
 
             driver.findElement(By.xpath(xpath)).click();
-            Thread.sleep(4*1000);
+            Thread.sleep(2*1000);
             String captchaText_2 = driver.findElement(By.xpath("//android.widget.TextView")).getText();
             System.out.println(captchaText_2);
 
@@ -29,7 +29,7 @@ public class captchaFilling extends Login {
             driver.findElement(By.xpath(xpath2)).click();
             System.out.println("Captcha Filling completed.");
 
-            Thread.sleep(10 * 1000);
+            Thread.sleep(5* 1000);
             WebElement location_permission_accept = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]"));
             location_permission_accept.click();
 

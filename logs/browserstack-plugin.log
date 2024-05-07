@@ -116,3 +116,23 @@
 13:18:05.109 [ApplicationImpl pooled thread 77] INFO  com.browserstack.utils.Helpers - C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
 13:18:05.109 [ApplicationImpl pooled thread 77] INFO  c.b.l.BrowserStackRunExtension - Agent path: C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
 13:18:05.109 [ApplicationImpl pooled thread 77] INFO  c.b.l.BrowserStackRunExtension - Plugin version: v1.1.4
+13:21:36.198 [ApplicationImpl pooled thread 92] INFO  c.b.l.BrowserStackRunExtension - testng
+13:21:36.199 [ApplicationImpl pooled thread 92] INFO  com.browserstack.utils.Helpers - true
+13:21:36.200 [ApplicationImpl pooled thread 92] INFO  com.browserstack.utils.Helpers - C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:21:36.200 [ApplicationImpl pooled thread 92] INFO  c.b.l.BrowserStackRunExtension - Agent path: C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:21:36.200 [ApplicationImpl pooled thread 92] INFO  c.b.l.BrowserStackRunExtension - Plugin version: v1.1.4
+13:25:53.793 [ApplicationImpl pooled thread 93] INFO  c.b.l.BrowserStackRunExtension - testng
+13:25:53.794 [ApplicationImpl pooled thread 93] INFO  com.browserstack.utils.Helpers - true
+13:25:53.795 [ApplicationImpl pooled thread 93] INFO  com.browserstack.utils.Helpers - C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:25:53.795 [ApplicationImpl pooled thread 93] INFO  c.b.l.BrowserStackRunExtension - Agent path: C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:25:53.795 [ApplicationImpl pooled thread 93] INFO  c.b.l.BrowserStackRunExtension - Plugin version: v1.1.4
+13:26:10.507 [ApplicationImpl pooled thread 87] INFO  c.b.l.BrowserStackRunExtension - testng
+13:26:10.508 [ApplicationImpl pooled thread 87] INFO  com.browserstack.utils.Helpers - true
+13:26:10.508 [ApplicationImpl pooled thread 87] INFO  com.browserstack.utils.Helpers - C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:26:10.508 [ApplicationImpl pooled thread 87] INFO  c.b.l.BrowserStackRunExtension - Agent path: C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:26:10.508 [ApplicationImpl pooled thread 87] INFO  c.b.l.BrowserStackRunExtension - Plugin version: v1.1.4
+13:34:56.194 [ApplicationImpl pooled thread 115] INFO  c.b.l.BrowserStackRunExtension - testng
+13:34:56.214 [ApplicationImpl pooled thread 115] INFO  com.browserstack.utils.Helpers - true
+13:34:56.216 [ApplicationImpl pooled thread 115] INFO  com.browserstack.utils.Helpers - C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:34:56.216 [ApplicationImpl pooled thread 115] INFO  c.b.l.BrowserStackRunExtension - Agent path: C:/Users/leomo/.m2/repository/com/browserstack/browserstack-java-sdk/1.13.22/browserstack-java-sdk-1.13.22.jar
+13:34:56.216 [ApplicationImpl pooled thread 115] INFO  c.b.l.BrowserStackRunExtension - Plugin version: v1.1.4
