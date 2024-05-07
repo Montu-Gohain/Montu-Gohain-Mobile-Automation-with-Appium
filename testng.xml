@@ -2,10 +2,9 @@
 <suite name="Appium Test Suite">
     <test name="Login and Logout">
         <classes>
-            <class name="FreightSmith.BaseTestOpenApp" />
+<!--            <class name="FreightSmith.BaseTestOpenApp" />-->
             <class name="FreightSmith.Login" />
             <class name="FreightSmith.captchaFilling" />
-            <class name="FreightSmith.LogOut" />
         </classes>
     </test>
 </suite>

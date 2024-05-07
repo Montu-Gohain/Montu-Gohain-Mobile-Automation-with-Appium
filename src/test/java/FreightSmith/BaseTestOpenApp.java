@@ -2,11 +2,9 @@ package FreightSmith;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 
 import java.net.MalformedURLException;
@@ -27,6 +25,7 @@ public class BaseTestOpenApp {
         }
         catch (StaleElementReferenceException E){
             System.out.println("Final wait till the Acceptance button is clickable.");
+            Thread.sleep(5*1000);
             System.out.println("Terms and conditions accept button is clickable now.");
             return true;
         }
@@ -39,8 +38,8 @@ public class BaseTestOpenApp {
         dc.setCapability("platformName","Android");
         dc.setCapability("platformVersion","14");
         dc.setCapability("automationName" , "uiautomator2");
-        dc.setCapability("deviceName","realme RMX3710");
-//        dc.setCapability("deviceName","Realme virtual device");
+//        dc.setCapability("deviceName","realme RMX3710");
+        dc.setCapability("deviceName","Pixel_7");
 
         // Todo: To install the application for the first in the device (Whether it is Emulator or real device)
 //        dc.setCapability("app","E:\\Exuber_work\\Testable_apks\\FreightSmith.apk");
@@ -75,14 +74,8 @@ public class BaseTestOpenApp {
         System.out.println("Clicked in Continue Button in the Language selection page.");
         Thread.sleep(5000);
 
+
+
     }
 
-
-//    @AfterSuite
-//    public void closeApplication() {
-//        // Quit the Appium driver
-//        System.out.println("All tests completed, Let's close the application");
-//
-//        driver.quit();
-//    }
 }
