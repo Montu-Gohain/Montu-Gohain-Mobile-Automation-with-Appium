@@ -57,9 +57,9 @@ public class BaseTestOpenApp {
 //        Thread.sleep(25000);
 
 
-        WebElement download_in_progress = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Download is in progress\"]"));
-
-        recurse_till_download(download_in_progress);
+//        WebElement download_in_progress = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Download is in progress\"]"));
+//
+//        recurse_till_download(download_in_progress);
 
         WebElement accept_button = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]"));
 
