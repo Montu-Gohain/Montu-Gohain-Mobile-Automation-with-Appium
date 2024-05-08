@@ -17,8 +17,6 @@ public class captchaFilling extends Login {
     public void captcha_Filling() throws InterruptedException {
         Thread.sleep(5000);
         try {
-
-
             String captchaText = driver.findElement(By.xpath("//android.widget.TextView")).getText();
             System.out.println(captchaText);
 
