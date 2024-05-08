@@ -116,8 +116,33 @@ public class captchaFilling extends Login {
 
         Thread.sleep(2*1000); // Wait for 4 seconds.
 
+//        Todo : Input validation in the edit profile input form
+
         System.out.println("Updating Firstname");
         WebElement firstname_input = driver.findElement(By.xpath("(//android.widget.EditText)[1]"));
+        WebElement lastname_input = driver.findElement(By.xpath("(//android.widget.EditText)[2]"));
+
+        firstname_input.sendKeys("");
+        firstname_input.sendKeys("2"); // Entering non-supported input value and expecting error message.
+
+
+        lastname_input.sendKeys("");
+        lastname_input.sendKeys("3"); // Entering non-supported input value and expecting error message.
+
+//        Let's Check if we can see the error message
+        WebElement lastname_error_message = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"Special characters and numbers are not allowed\"])[2]"));
+
+//        Here we're checking whether we are getting the warning message or not.
+
+        WebElement firstname_error_message = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Special characters and numbers are not allowed\"]"));
+
+        Thread.sleep(3*1000);
+        Assert.assertTrue(firstname_error_message.isDisplayed() && lastname_error_message.isDisplayed());
+
+        System.out.println("Firstname and lastname input validation working perfectly..");
+
+
+//        Let's enter valid firstname now.
         firstname_input.sendKeys("");
         firstname_input.sendKeys(new_first_name);
 
@@ -125,7 +150,10 @@ public class captchaFilling extends Login {
         Thread.sleep(3*1000); // Wait for 3 seconds.
 
         System.out.println("Updating Lastname");
-        WebElement lastname_input = driver.findElement(By.xpath("(//android.widget.EditText)[2]"));
+
+
+//      Let's enter valid lastname now.
+
         lastname_input.sendKeys("");
         lastname_input.sendKeys(new_last_name);
 
@@ -143,7 +171,7 @@ public class captchaFilling extends Login {
         WebElement submit_button = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup[6]"));
         submit_button.click();
 
-        Thread.sleep(3*1000); // Wait for 3 seconds.
+        Thread.sleep(5*1000); // Wait for 3 seconds.
         System.out.println("Going again to home screen");
 
         WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
