@@ -149,7 +149,7 @@ public class captchaFilling extends Login {
         WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
         home_icon.click();
         System.out.println("Let's compare the profile data , if it is updated or not.");
-        Thread.sleep(2*1000);
+        Thread.sleep(5*1000);
         account_profile_section.click();
 
         System.out.println("Waiting to see the updated profile data.");

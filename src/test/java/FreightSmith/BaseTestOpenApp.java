@@ -38,8 +38,8 @@ public class BaseTestOpenApp {
         dc.setCapability("platformName","Android");
         dc.setCapability("platformVersion","14");
         dc.setCapability("automationName" , "uiautomator2");
-//        dc.setCapability("deviceName","realme RMX3710");
-        dc.setCapability("deviceName","Pixel_7");
+        dc.setCapability("deviceName","realme RMX3710");
+//        dc.setCapability("deviceName","Pixel_7");
 
         // Todo: To install the application for the first in the device (Whether it is Emulator or real device)
 //        dc.setCapability("app","E:\\Exuber_work\\Testable_apks\\FreightSmith.apk");
