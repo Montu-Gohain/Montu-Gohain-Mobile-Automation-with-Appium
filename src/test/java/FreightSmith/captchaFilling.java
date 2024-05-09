@@ -249,9 +249,12 @@ public class captchaFilling extends Login {
         Thread.sleep(5 * 1000);
 
 //        Is this correct pop-up window.
-//        WebElement yes_btn = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Yes\"]"));
-//        yes_btn.click();
-//        Thread.sleep(5 * 1000);
+        WebElement yes_btn = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Yes\"]"));
+        if(yes_btn.isDisplayed()){
+            yes_btn.click();
+            Thread.sleep(5 * 1000);
+            System.out.println("Is this correct window shown");
+        }
 
 //        Please click to verify the Purchase order.
         WebElement click_to_verify_po = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Ok\"]"));
@@ -286,12 +289,13 @@ public class captchaFilling extends Login {
         System.out.println("Carrier name entered sucessfully");
 
 //        Waiting for the option to appear in dropdown menu.
-        Thread.sleep(4*1000);
+        Thread.sleep(7*1000);
         WebElement dropdown_option = driver.findElement(By.xpath("//android.widget.TextView[@text=\"TEST ARNAB\"]"));
         dropdown_option.click();
         System.out.println("Carrier selected successfully from the dropdown.");
 
 //      Entering any 4 digits number in Trailer number and Tractor number input.
+        Thread.sleep(3*1000);
 
         WebElement trailer_number = driver.findElement(By.xpath("//android.widget.EditText[@text=\"L5678\"]"));
         trailer_number.sendKeys("");
@@ -305,11 +309,14 @@ public class captchaFilling extends Login {
         System.out.println("Entered trailer number and tractor number.");
 
         Thread.sleep(2*1000);
+        System.out.println("Final wait after clicking the submit button.");
 
 //        Finally click on submit button.
 
         WebElement final_submit_btn = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[11]"));
         final_submit_btn.click();
+        final_submit_btn.click();
+
 
 //        Final wait till success message appears on the screen.
         System.out.println("Waiting for the success message pop-up.");
