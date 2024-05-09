@@ -36,16 +36,16 @@ public class BaseTestOpenApp {
         DesiredCapabilities dc = new DesiredCapabilities();
 
         dc.setCapability("platformName","Android");
-        dc.setCapability("platformVersion","14");
+//        dc.setCapability("platformVersion","14");
         dc.setCapability("automationName" , "uiautomator2");
-        dc.setCapability("deviceName","realme RMX3710");
+//        dc.setCapability("deviceName","realme RMX3710");
 //        dc.setCapability("deviceName","Pixel_7");
 
         // Todo: To install the application for the first in the device (Whether it is Emulator or real device)
 //        dc.setCapability("app","E:\\Exuber_work\\Testable_apks\\FreightSmith.apk");
 
-        dc.setCapability("appPackage", "net.freightsmith");
-        dc.setCapability("appActivity","net.freightsmith.MainActivity");
+//        dc.setCapability("appPackage", "net.freightsmith");
+//        dc.setCapability("appActivity","net.freightsmith.MainActivity");
 
         URL url = URI.create("http://127.0.0.1:4723/wd/hub").toURL();
         driver = new AndroidDriver(url, dc);
@@ -56,9 +56,9 @@ public class BaseTestOpenApp {
 //        Thread.sleep(25000);
 
 
-        WebElement download_in_progress = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Download is in progress\"]"));
-
-        recurse_till_download(download_in_progress);
+//        WebElement download_in_progress = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Download is in progress\"]"));
+//
+//        recurse_till_download(download_in_progress);
 
         WebElement accept_button = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]"));
 
