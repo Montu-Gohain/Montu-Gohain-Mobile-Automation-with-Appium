@@ -1,7 +1,11 @@
 package FreightSmith;
 
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.ios.options.webview.SupportsSafariWebInspectorMaxFrameLengthOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +18,7 @@ public class captchaFilling extends Login {
 
 
     @Test
-    public void captcha_Filling() throws InterruptedException {
+    public void captcha_Filling() throws InterruptedException,IOException {
         Thread.sleep(5000);
         try {
             String captchaText = driver.findElement(By.xpath("//android.widget.TextView")).getText();
@@ -41,7 +45,10 @@ public class captchaFilling extends Login {
             location_permission_accept.click();
 
 //            Todo : Let's go the account summary section. and try to edit the profile details
-            edit_profile();
+//            edit_profile();
+
+//            Todo : Let's go to Driver Check In Screen.
+              driver_checkIn();
 
         } catch (Exception e) {
 
@@ -79,7 +86,7 @@ public class captchaFilling extends Login {
                 throw new IllegalArgumentException("Unknown option: " + option);
         }
     }
-
+// Todo : Different test cases can be written here.
     public void edit_profile() throws InterruptedException, IOException {
         Properties prop = new Properties();
         File file = new File("testdata.properties");
@@ -205,4 +212,128 @@ public class captchaFilling extends Login {
 
         System.out.println("Profile data updated successfully.");
     }
+    public void driver_checkIn () throws  InterruptedException, IOException {
+        Properties prop = new Properties();
+        File file = new File("testdata.properties");
+        FileInputStream fis = new FileInputStream(file);
+        prop.load(fis);
+
+        System.out.println("Let's go to Driver Check-In page.");
+        Thread.sleep(5*1000);
+//        Todo : Step 1: Open Driver Check-In Page.
+        WebElement driver_check_in = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+        driver_check_in.click();
+        Thread.sleep(8*1000); // Waiting to load the device location.
+
+//        Todo : Step 2 : Enter PO number and zip code.
+
+        String target_po = prop.getProperty("target_po");
+        String target_zip_code = prop.getProperty("target_zip_code");
+
+        System.out.println("Entering PO number : " + target_po + "/n" + "Entering zip code : " + target_zip_code);
+
+
+        WebElement po_number_input = driver.findElement(By.xpath("//android.widget.EditText[@text=\"PO Number\"]"));
+        po_number_input.sendKeys(target_po);
+
+        Thread.sleep(2*1000);
+        WebElement zip_code_input = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Warehouse Zip Code\"]"));
+        zip_code_input.sendKeys(target_zip_code);
+
+//        Todo : Step 3 :  Click on the submit button.
+
+        WebElement submit_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        System.out.println("Finally Clicking on the submit button");
+        submit_btn.click();
+
+        Thread.sleep(5 * 1000);
+
+//        Is this correct pop-up window.
+//        WebElement yes_btn = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Yes\"]"));
+//        yes_btn.click();
+//        Thread.sleep(5 * 1000);
+
+//        Please click to verify the Purchase order.
+        WebElement click_to_verify_po = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Ok\"]"));
+        click_to_verify_po.click();
+        Thread.sleep(5 * 1000);
+
+
+//        After displaying as verified, click on verify all po's button.
+        WebElement verify_all_po = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Verify All PO's\"]"));
+        verify_all_po.click();
+        Thread.sleep(5 * 1000);
+
+//        Proceed to Check In
+        WebElement proceed_to_checkin = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Proceed to Check-In\"]"));
+        proceed_to_checkin.click();
+        Thread.sleep(2*1000);
+
+//        Click No in You've verified X purchase number.
+        WebElement no_button  = driver.findElement(By.xpath("//android.widget.TextView[@text=\"No\"]"));
+        no_button.click();
+
+        Thread.sleep(3*1000);
+//        At this point the form should open
+        WebElement option_trailer_tractor = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[10]/android.view.ViewGroup"));
+        option_trailer_tractor.click();
+
+//        Entering Carrier name and selecting from dropdown.
+        WebElement carrier_name_input = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Enter or Add Carrier Name Here\"]"));
+        carrier_name_input.click();
+//       carrier_name_input.sendKeys("TEST ARNAB");
+        enter_carrier_name();
+        System.out.println("Carrier name entered sucessfully");
+
+//        Waiting for the option to appear in dropdown menu.
+        Thread.sleep(4*1000);
+        WebElement dropdown_option = driver.findElement(By.xpath("//android.widget.TextView[@text=\"TEST ARNAB\"]"));
+        dropdown_option.click();
+        System.out.println("Carrier selected successfully from the dropdown.");
+
+//      Entering any 4 digits number in Trailer number and Tractor number input.
+
+        WebElement trailer_number = driver.findElement(By.xpath("//android.widget.EditText[@text=\"L5678\"]"));
+        trailer_number.sendKeys("");
+        trailer_number.sendKeys("3374");
+
+        Thread.sleep(2*1000);
+
+        WebElement tractor_number = driver.findElement(By.xpath("//android.widget.EditText[@text=\"T1234\"]"));
+        tractor_number.sendKeys("");
+        tractor_number.sendKeys("7476");
+        System.out.println("Entered trailer number and tractor number.");
+
+        Thread.sleep(2*1000);
+
+//        Finally click on submit button.
+
+        WebElement final_submit_btn = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[11]"));
+        final_submit_btn.click();
+
+//        Final wait till success message appears on the screen.
+        System.out.println("Waiting for the success message pop-up.");
+        Thread.sleep(6*1000);
+
+        WebElement final_ok_button = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Ok\"]"));
+        final_ok_button.click();
+
+        System.out.println("Driver Check-In and PO Verification done successfully.");
+
+        Assert.assertTrue(true);
+
+    }
+    public void enter_carrier_name(){
+        driver.pressKey(new KeyEvent(AndroidKey.T));
+        driver.pressKey(new KeyEvent(AndroidKey.E));
+        driver.pressKey(new KeyEvent(AndroidKey.S));
+        driver.pressKey(new KeyEvent(AndroidKey.T));
+        driver.pressKey(new KeyEvent(AndroidKey.SPACE));
+        driver.pressKey(new KeyEvent(AndroidKey.A));
+        driver.pressKey(new KeyEvent(AndroidKey.R));
+        driver.pressKey(new KeyEvent(AndroidKey.N));
+        driver.pressKey(new KeyEvent(AndroidKey.A));
+        driver.pressKey(new KeyEvent(AndroidKey.B));
+    }
+
 }
