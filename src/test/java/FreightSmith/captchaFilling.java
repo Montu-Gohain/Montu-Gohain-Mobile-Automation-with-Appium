@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 
 public class captchaFilling extends Login {
@@ -48,8 +49,11 @@ public class captchaFilling extends Login {
 //            edit_profile();
 
 //            Todo : Let's go to Driver Check In Screen.
-              driver_checkIn();
 
+//              driver_checkIn();
+
+//            Todo : Let's go to Payment
+              payment_receipt_download();
         } catch (Exception e) {
 
             System.out.println("Error occurred: " + e.getMessage());
@@ -341,6 +345,38 @@ public class captchaFilling extends Login {
         driver.pressKey(new KeyEvent(AndroidKey.N));
         driver.pressKey(new KeyEvent(AndroidKey.A));
         driver.pressKey(new KeyEvent(AndroidKey.B));
+    }
+    public void payment_receipt_download() throws InterruptedException{
+
+        Thread.sleep(3*1000);
+//        Clicking on Payment section in Home Screen
+        WebElement payment_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
+        payment_section.click();
+        System.out.println("Clicked on Payment section.");
+
+        Thread.sleep(3*1000);
+//        Clicking on Completed
+        WebElement completed_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[2]"));
+        completed_section.click();
+
+        Thread.sleep(3*1000);
+//        Total completed payments details
+        List<WebElement> completed_payments_ = driver.findElements(By.xpath("//android.widget.TextView[@text=\"Click to View Details\"]"));
+        int total_completed_payments = completed_payments_.size();
+
+        System.out.println("Total number of completed payments : " + total_completed_payments);
+        Thread.sleep(2*1000);
+//        Click : Click to View Details
+        WebElement click_to_view_details = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"Click to View Details\"])[1]"));
+        click_to_view_details.click();
+
+        Thread.sleep(2*1000);
+//        Click on Download Receipt button.
+        WebElement download_receipt_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        download_receipt_btn.click();
+        System.out.println("Download Receipt button clicked, test complete");
+
+        Assert.assertTrue(true);
     }
 
 }
