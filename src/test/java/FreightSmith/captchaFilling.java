@@ -346,7 +346,12 @@ public class captchaFilling extends Login {
         driver.pressKey(new KeyEvent(AndroidKey.A));
         driver.pressKey(new KeyEvent(AndroidKey.B));
     }
-    public void payment_receipt_download() throws InterruptedException{
+    public void payment_receipt_download() throws InterruptedException,IOException{
+
+        Properties prop = new Properties();
+        File file = new File("testdata.properties");
+        FileInputStream fis = new FileInputStream(file);
+        prop.load(fis);
 
         Thread.sleep(3*1000);
 //        Clicking on Payment section in Home Screen
@@ -375,6 +380,47 @@ public class captchaFilling extends Login {
         WebElement download_receipt_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
         download_receipt_btn.click();
         System.out.println("Download Receipt button clicked, test complete");
+        Thread.sleep(5*1000);
+
+        WebElement allow_storage_permission = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_button\"]"));
+        allow_storage_permission.click();
+
+        System.out.println("Download started...");
+
+        Thread.sleep(4*1000);
+        System.out.println("Let's test out Share receipt feature.");
+//        Share Receipt test case.
+
+        WebElement share_receipt_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[4]"));
+        share_receipt_btn.click();
+
+        Thread.sleep(3*1000); // Waiting for the Share Receipt form
+
+        String share_receipt_to_email = prop.getProperty("share_receipt_email");
+
+//        For the first time we'll be clicking on the Submit button to test if the form validation is working or not.
+
+        WebElement submit_btn_sr = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]"));
+        submit_btn_sr.click();
+
+        Thread.sleep(3*1000);
+        WebElement email_error_msg = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Please enter valid email\"]"));
+
+        if(email_error_msg.isDisplayed()){
+            System.out.println("Email input field validation is working perfectly.");
+        }
+
+        Thread.sleep(3*1000);
+
+        WebElement share_receipt_email = driver.findElement(By.xpath("//android.widget.EditText[@text=\"Email\"]"));
+        share_receipt_email.sendKeys(share_receipt_to_email);
+
+
+//      Finally click on submit button.
+        submit_btn_sr.click();
+        submit_btn_sr.click();
+
+        System.out.println("Share Receipt email submit button clicked.");
 
         Assert.assertTrue(true);
     }

@@ -18,7 +18,7 @@ public class BaseTestOpenApp {
 
             if (downloadingElement.isDisplayed()) {
                 System.out.println("Downloading window is still displayed. Waiting...");
-                Thread.sleep(15 * 1000); // Convert seconds to milliseconds
+                Thread.sleep(10 * 1000); // Convert seconds to milliseconds
                 return recurse_till_download(downloadingElement);
             }
             return false;
