@@ -18,3 +18,14 @@ Ways to run the test scripts locally and in Browserstack.
       gpsLocation: 33.449626,-112.248189
      ```
    4. After adding all these required values , you can run the test file as you ran to perform the locally.While the script runs in IDE, you'll see it also running on browserstack dashboard along with the project build name.
+
+
+
+# Test Results public link : 
+
+ >  Test 1 : Sign In and Edit Profile : 
+https://app-automate.browserstack.com/builds/79de7bbbb45ecf854d48534a0e9160183af1c1b7/sessions/317a5594550a1e8ea7f8f2ede5ed2ff8a9d05605?auth_token=e000925def09303dd8bf0140ffb46e5c463853616522d22c8f4dfa5ea1421626
+
+ >  Test 2 : Driver CheckIn and PO Verification : https://app-automate.browserstack.com/builds/29e137d6ecb23ae8f4cf69acb29563225f400a91/sessions/b2bc77ce29664ba46a625b704176e32ecaebc4d1?auth_token=a71a219163142b771f8fd322cf5fef0e4b2f6dadc412ab9559719f342e5cce0b
+ 
+ >  Test 3 : Payment Section (Download receipt & Share receipt) :  https://app-automate.browserstack.com/builds/22739f5ef31fcb87e5d0ea387012376faa2f8204/sessions/18a131f493e65f8a1903a4185b3bfe22f2338b5e?auth_token=7883c3577b06fb177e0259ab9f02c9411f9b1f092b22ceb787f5837d7e9ad196
