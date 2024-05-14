@@ -1,12 +1,13 @@
 package FreightSmith;
 
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -16,8 +17,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static java.time.Duration.ofMillis;
 
@@ -56,12 +55,16 @@ public class captchaFilling extends Login {
 
 //            Todo : Let's go to Driver Check In Screen.
 
-//              driver_checkIn();
+            driver_checkIn();
 
 //            Todo : Let's go to Payment
 //              payment_receipt_download();
 
+
 //            Todo : payment awaiting.
+
+//            To get the most updated data for payment section let's logout and login again.
+            logout_and_relogin();
             payment_awaiting();
 
         } catch (Exception e) {
@@ -100,7 +103,7 @@ public class captchaFilling extends Login {
                 throw new IllegalArgumentException("Unknown option: " + option);
         }
     }
-// Todo : Different test cases can be written here.
+    // Todo : Different test cases can be written here.
     public void edit_profile() throws InterruptedException, IOException {
         Properties prop = new Properties();
         File file = new File("testdata.properties");
@@ -434,6 +437,50 @@ public class captchaFilling extends Login {
 
         Assert.assertTrue(true);
     }
+    public void logout_and_relogin() throws InterruptedException{
+        WebElement user_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]/android.view.ViewGroup"));
+        user_icon.click();
+        System.out.println("User icon clicked.");
+        Thread.sleep(2*1000);
+
+        WebElement logout_btn = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]"));
+        logout_btn.click();
+
+        Thread.sleep(2*1000);
+
+        WebElement yes_logout_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]"));
+        yes_logout_btn.click();
+        Thread.sleep(3*1000);
+        System.out.println("Logout button clicked and confirmed to logout");
+
+        WebElement login_button = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]"));
+        login_button.click();
+        System.out.println("Clicking on login in button again.");
+
+        Thread.sleep(5*1000);
+//       Fill the captcha
+        String captchaText = driver.findElement(By.xpath("//android.widget.TextView")).getText();
+        System.out.println(captchaText);
+
+        String option =captchaText.split("\\s+")[2];
+        System.out.println(option);
+        String xpath = getOptionXPath(option);
+
+
+        driver.findElement(By.xpath(xpath)).click();
+        Thread.sleep(4*1000);
+        String captchaText_2 = driver.findElement(By.xpath("//android.widget.TextView")).getText();
+        System.out.println(captchaText_2);
+
+        String option_2 =captchaText_2.split("\\s+")[2];
+        System.out.println(option_2);
+        String xpath2 = getOptionXPath_2(option);
+        driver.findElement(By.xpath(xpath2)).click();
+        System.out.println("Captcha Filling completed.");
+
+        Thread.sleep(10 * 1000);
+
+    }
     public void payment_awaiting() throws InterruptedException, IOException{
         Properties prop = new Properties();
         File file = new File("testdata.properties");
@@ -444,19 +491,19 @@ public class captchaFilling extends Login {
         System.out.println("Let's test out payment awaiting.");
         Thread.sleep(3*1000);
 //        Go to Home screen by clicking on the Home icon.
-//
+
 //        WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
 //        home_icon.click();
-
-        Thread.sleep(3*1000);
+//
+//        Thread.sleep(3*1000);
 
 //        Go to payment screen.
 
         WebElement payment_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
         payment_section.click();
-        System.out.println("Clicked on Payment section.");
+        System.out.println("Clicked on Payment section, waiting to update payment counts.");
 
-        Thread.sleep(9*1000);
+        Thread.sleep(7*1000);
 //        Click On awaiting section.
 
         WebElement awaiting_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]"));
@@ -464,37 +511,20 @@ public class captchaFilling extends Login {
 
         Thread.sleep(7*1000);
 
-//        Extract out the number of total awaiting payments and print it in console.
-
-        String awaiting_text_heading = driver.findElement(By.xpath("(//android.widget.TextView[1])[1]")).getText();
-
-        int total_awaiting_count = extractNumber(awaiting_text_heading);
-        System.out.println("Total awaiting payments : " + total_awaiting_count);
-
-        String last_index = String.valueOf((total_awaiting_count-1));
 
         System.out.println("Scroll down to bottom of the screen.");
-// Scroll to bottom using Javascript
-        TouchAction action = new TouchAction(driver);
 
-// Get the dimensions of the device screen
-        Dimension size = driver.manage().window().getSize();
+//        Todo : Scroll to the bottom of the screen.
 
-        int startX = size.width / 2;
-        int startY = (int) (size.height * 0.8);
-        int endX = size.width / 2;
-        int endY = (int) (size.height * 0.2);
+        for(int i=0; i<3; i++){
+            scroll_to_bottom(driver);
+        }
 
-        action.press(PointOption.point(startX, startY))
-                .waitAction(WaitOptions.waitOptions(ofMillis(1000)))
-                .moveTo(PointOption.point(endX, endY))
-                .release()
-                .perform();
 
-        Thread.sleep(2000);
+        System.out.println("Scrolling action completed.");
+        Thread.sleep(4000);
 //        Open up the last payment awaiting card
-        WebElement latest_awaiting_payment = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[" +last_index+
-                "]/android.view.ViewGroup/android.view.ViewGroup"));
+        WebElement latest_awaiting_payment = driver.findElement(By.xpath("(//android.widget.TextView[@text=\"ALBERTSONS TOLLESON (GROCERY)\"])[4]"));
         latest_awaiting_payment.click();
 
         Thread.sleep(3*1000);
@@ -512,15 +542,22 @@ public class captchaFilling extends Login {
         System.out.println("PO is matching, payment awaiting successful.");
 
     }
-    public static int extractNumber(String text) {
-        // Use regular expression to find digits within parentheses
-        Matcher matcher = Pattern.compile("\\d+").matcher(text.replaceAll("\\D+", ""));
-        if (matcher.find()) {
-            return Integer.parseInt(matcher.group());
-        } else {
-            // No number found, return -1 (or throw an exception if preferred)
-            return -1;
-        }
+    public void scroll_to_bottom(AndroidDriver driver){
+        TouchAction action = new TouchAction(driver);
+
+// Get the dimensions of the device screen
+        Dimension size = driver.manage().window().getSize();
+
+        int startX = size.width / 2;
+        int startY = (int) (size.height * 0.8);
+        int endX = size.width / 2;
+        int endY = (int) (size.height * 0.2);
+
+        action.press(PointOption.point(startX, startY))
+                .waitAction(WaitOptions.waitOptions(ofMillis(1000)))
+                .moveTo(PointOption.point(endX, endY))
+                .release()
+                .perform();
     }
 
 }
