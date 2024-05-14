@@ -2,10 +2,9 @@ package FreightSmith;
 
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import io.appium.java_client.ios.options.webview.SupportsSafariWebInspectorMaxFrameLengthOption;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.WebDriverListener;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,6 +13,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class captchaFilling extends Login {
 
@@ -50,10 +51,14 @@ public class captchaFilling extends Login {
 
 //            Todo : Let's go to Driver Check In Screen.
 
-//              driver_checkIn();
+              driver_checkIn();
 
 //            Todo : Let's go to Payment
-              payment_receipt_download();
+//              payment_receipt_download();
+
+//            Todo : payment awaiting.
+            payment_awaiting();
+
         } catch (Exception e) {
 
             System.out.println("Error occurred: " + e.getMessage());
@@ -423,6 +428,81 @@ public class captchaFilling extends Login {
         System.out.println("Share Receipt email submit button clicked.");
 
         Assert.assertTrue(true);
+    }
+    public void payment_awaiting() throws InterruptedException, IOException{
+        Properties prop = new Properties();
+        File file = new File("testdata.properties");
+        FileInputStream fis = new FileInputStream(file);
+        prop.load(fis);
+
+        String driver_check_in_latest_PO = prop.getProperty("target_po");
+        System.out.println("Let's test out payment awaiting.");
+        Thread.sleep(3*1000);
+//        Go to Home screen by clicking on the Home icon.
+
+        WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
+        home_icon.click();
+
+        Thread.sleep(3*1000);
+
+//        Go to payment screen.
+
+        WebElement payment_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
+        payment_section.click();
+        System.out.println("Clicked on Payment section.");
+
+        Thread.sleep(3*1000);
+//        Click On awaiting section.
+
+        WebElement awaiting_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]"));
+        awaiting_section.click();
+
+        Thread.sleep(3*1000);
+
+//        Extract out the number of total awaiting payments and print it in console.
+
+        String awaiting_text_heading = driver.findElement(By.xpath("(//android.widget.TextView[1])[1]")).getText();
+
+        int total_awaiting_count = extractNumber(awaiting_text_heading);
+        System.out.println("Total awaiting payments : " + total_awaiting_count);
+
+        String last_index = String.valueOf((total_awaiting_count-1));
+
+        System.out.println("Scroll down to bottom of the screen.");
+// Scroll to bottom using Javascript
+        JavascriptExecutor js =  driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+        Thread.sleep(2000);
+//        Open up the last payment awaiting card
+        WebElement latest_awaiting_payment = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[" +last_index+
+                "]/android.view.ViewGroup/android.view.ViewGroup"));
+        latest_awaiting_payment.click();
+
+        Thread.sleep(3*1000);
+//        Finally match the PO number in the card with our target PO , if it matches then test passed.
+
+        WebElement appointment_time = driver.findElement(By.xpath("//android.widget.TextView[7]"));
+        System.out.println("Appointment time : " + appointment_time.getText());
+
+        Thread.sleep(2*1000);
+
+        String latest_po = driver.findElement(By.xpath("//android.widget.TextView[9]")).getText();
+        boolean match_pos = latest_po.equals(driver_check_in_latest_PO);
+
+        Assert.assertTrue(match_pos);
+        System.out.println("PO is matching, payment awaiting successful.");
+
+    }
+    public static int extractNumber(String text) {
+        // Use regular expression to find digits within parentheses
+        Matcher matcher = Pattern.compile("\\d+").matcher(text.replaceAll("\\D+", ""));
+        if (matcher.find()) {
+            return Integer.parseInt(matcher.group());
+        } else {
+            // No number found, return -1 (or throw an exception if preferred)
+            return -1;
+        }
     }
 
 }
