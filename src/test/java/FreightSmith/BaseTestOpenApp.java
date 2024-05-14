@@ -49,7 +49,7 @@ public class BaseTestOpenApp {
 
         URL url = URI.create("http://127.0.0.1:4723/wd/hub").toURL();
         driver = new AndroidDriver(url, dc);
-        Thread.sleep(20000);
+        Thread.sleep(29000);
         System.out.println("Application Opened Successfully in the Device.");
 
         // Todo : Step 1 : Accept the terms and conditions

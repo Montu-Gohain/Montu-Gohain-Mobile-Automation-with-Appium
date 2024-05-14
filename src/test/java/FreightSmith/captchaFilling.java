@@ -1,8 +1,11 @@
 package FreightSmith;
 
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import org.openqa.selenium.JavascriptExecutor;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,6 +18,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.time.Duration.ofMillis;
 
 public class captchaFilling extends Login {
 
@@ -51,7 +56,7 @@ public class captchaFilling extends Login {
 
 //            Todo : Let's go to Driver Check In Screen.
 
-              driver_checkIn();
+//              driver_checkIn();
 
 //            Todo : Let's go to Payment
 //              payment_receipt_download();
@@ -439,9 +444,9 @@ public class captchaFilling extends Login {
         System.out.println("Let's test out payment awaiting.");
         Thread.sleep(3*1000);
 //        Go to Home screen by clicking on the Home icon.
-
-        WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
-        home_icon.click();
+//
+//        WebElement home_icon = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]"));
+//        home_icon.click();
 
         Thread.sleep(3*1000);
 
@@ -451,13 +456,13 @@ public class captchaFilling extends Login {
         payment_section.click();
         System.out.println("Clicked on Payment section.");
 
-        Thread.sleep(3*1000);
+        Thread.sleep(9*1000);
 //        Click On awaiting section.
 
         WebElement awaiting_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]"));
         awaiting_section.click();
 
-        Thread.sleep(3*1000);
+        Thread.sleep(7*1000);
 
 //        Extract out the number of total awaiting payments and print it in console.
 
@@ -470,8 +475,21 @@ public class captchaFilling extends Login {
 
         System.out.println("Scroll down to bottom of the screen.");
 // Scroll to bottom using Javascript
-        JavascriptExecutor js =  driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        TouchAction action = new TouchAction(driver);
+
+// Get the dimensions of the device screen
+        Dimension size = driver.manage().window().getSize();
+
+        int startX = size.width / 2;
+        int startY = (int) (size.height * 0.8);
+        int endX = size.width / 2;
+        int endY = (int) (size.height * 0.2);
+
+        action.press(PointOption.point(startX, startY))
+                .waitAction(WaitOptions.waitOptions(ofMillis(1000)))
+                .moveTo(PointOption.point(endX, endY))
+                .release()
+                .perform();
 
         Thread.sleep(2000);
 //        Open up the last payment awaiting card
