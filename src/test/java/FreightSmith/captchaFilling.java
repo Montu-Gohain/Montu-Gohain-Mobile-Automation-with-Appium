@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.swing.plaf.TableHeaderUI;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -50,22 +51,27 @@ public class captchaFilling extends Login {
             WebElement location_permission_accept = driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/permission_allow_foreground_only_button\"]"));
             location_permission_accept.click();
 
+//            ====================== Different test cases, Just Call the function and perform the test ==============================
+
 //            Todo : Let's go the account summary section. and try to edit the profile details
 //            edit_profile();
 
 //            Todo : Let's go to Driver Check In Screen.
-
-            driver_checkIn();
+//            driver_checkIn();
 
 //            Todo : Let's go to Payment
-//              payment_receipt_download();
+//            payment_receipt_download();
 
 
 //            Todo : payment awaiting.
-
 //            To get the most updated data for payment section let's logout and login again.
-            logout_and_relogin();
-            payment_awaiting();
+
+//            logout_and_relogin();
+//            payment_awaiting();
+
+//            Todo : Date : 15th march : Test case : Payment Due
+
+              payment_due();
 
         } catch (Exception e) {
 
@@ -559,5 +565,142 @@ public class captchaFilling extends Login {
                 .release()
                 .perform();
     }
+//    Date : 15th May
+    public void payment_due() throws InterruptedException, IOException{
 
+        Properties prop = new Properties();
+        File properties_file = new File("testdata.properties");
+        FileInputStream fis = new FileInputStream(properties_file);
+        prop.load(fis);
+
+//        Step 1 : Go to payments section.
+        WebElement payment_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
+        payment_section.click();
+        System.out.println("Payment option clicked on HomeScreen.");
+
+        Thread.sleep(6*1000); // Waiting to get the payment data load in the screen.
+//      Step 2 : Go to Payment Due section.
+
+        WebElement payment_due_section = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[2]"));
+        payment_due_section.click();
+
+        System.out.println("Payment Due option clicked.");
+
+
+        Thread.sleep(3*1000);
+//      Step 3 : Click on the topmost payment due entry.
+        WebElement topmost_payment_due = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+        topmost_payment_due.click();
+
+        System.out.println("Topmost payment due entry is clicked.");
+        Thread.sleep(3*1000);
+
+        WebElement PO_no = driver.findElement(By.xpath("//android.widget.TextView[14]"));
+        System.out.println("Current PO number : " + PO_no.getText());
+
+//        PDD : Payment Due Details.
+        WebElement pay_btn_PDD = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        pay_btn_PDD.click();
+
+        Thread.sleep(2000);
+
+//      Select Partial payment option and click Pay
+        WebElement partial_payment_option = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
+        partial_payment_option.click();
+        Thread.sleep(2*1000);
+
+//        PP : Partial payment
+        String partial_payment_amount = prop.getProperty("partial_payment_amount");
+        WebElement PP_input_field = driver.findElement(By.xpath("//android.widget.EditText"));
+        PP_input_field.sendKeys(partial_payment_amount);
+        System.out.println("Entered partial amount : " + partial_payment_amount);
+        Thread.sleep(2000);
+
+//        Clicking on Remaining payment text to remove the keyboard.
+        WebElement remaining_amount_text = driver.findElement(By.xpath("//android.widget.TextView[4]"));
+        remaining_amount_text.click();
+
+        Thread.sleep(2000);
+
+//        PD : Payment Details
+        WebElement pay_btn_PD = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        pay_btn_PD.click();
+
+        System.out.println("Clicked in Pay button.");
+
+        Thread.sleep(2000);
+
+        select_payment_method(driver);
+
+//        ================= Partial payment ===============================
+        System.out.println("Partial payment complete, let's finish the remaining amount.");
+
+        WebElement pay_remaining_amount = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]"));
+        pay_remaining_amount.click();
+        System.out.println("Clicked on Pay remaining amount button.");
+        Thread.sleep(2000);
+
+//        Select the Full payment option.
+        WebElement full_payment_option = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+        full_payment_option.click();
+        System.out.println("Full payment option selected.");
+        Thread.sleep(2000);
+
+//        FP : Full payment
+
+        WebElement pay_btn_FP = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        pay_btn_FP.click();
+        Thread.sleep(2000);
+        System.out.println("Now let's select again the payment method as relay and complete the payment.");
+
+        select_payment_method(driver);
+
+        Assert.assertTrue(true);
+        System.out.println("Partial and full payment through Relay : Test case complete.");
+    }
+    public void select_payment_method(AndroidDriver driver) throws InterruptedException{
+        System.out.println("Let's choose Relay as our Automated payment method.");
+
+        WebElement relay_option = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup"));
+        relay_option.click();
+        Thread.sleep(2000);
+
+//        Let's click on Pay button.
+//        SPM : Select a payment method.
+
+        WebElement pay_btn_SPM = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        pay_btn_SPM.click();
+        Thread.sleep(2000);
+
+        System.out.println("We've reached Confirm Payment Screen.");
+        WebElement confirm_payment_btn = driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]"));
+        confirm_payment_btn.click();
+
+        Thread.sleep(2000);
+        System.out.println("Let's enter money code for Relay...");
+
+        WebElement money_code_input = driver.findElement(By.xpath("//android.widget.EditText[@text=\"************\"]"));
+        money_code_input.click();
+        Thread.sleep(2000);
+
+        enter_money_code();
+        System.out.println("We've entered the money code for relay.");
+        WebElement money_code_text = driver.findElement(By.xpath("//android.widget.TextView[@text=\"Money code *\"]"));
+        money_code_text.click(); // Click it to close the keyboard.
+
+        Thread.sleep(2000);
+//        Finally click on submit button and wait for 9 seconds.
+        WebElement submit_btn = driver.findElement(By.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]"));
+        submit_btn.click();
+        Thread.sleep(9000);
+        System.out.println("Payment completed through Relay Successfully.");
+    }
+    public void enter_money_code(){
+        driver.pressKey(new KeyEvent(AndroidKey.T));
+        driver.pressKey(new KeyEvent(AndroidKey.F));
+        driver.pressKey(new KeyEvent(AndroidKey.BUTTON_8));
+        driver.pressKey(new KeyEvent(AndroidKey.M));
+        driver.pressKey(new KeyEvent(AndroidKey.K));
+        driver.pressKey(new KeyEvent(AndroidKey.S));
+    }
 }
