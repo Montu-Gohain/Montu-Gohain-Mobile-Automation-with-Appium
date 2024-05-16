@@ -31,3 +31,7 @@ https://app-automate.browserstack.com/builds/79de7bbbb45ecf854d48534a0e9160183af
  >  Test 3 : Payment Section (Download receipt & Share receipt) :  https://app-automate.browserstack.com/builds/22739f5ef31fcb87e5d0ea387012376faa2f8204/sessions/18a131f493e65f8a1903a4185b3bfe22f2338b5e?auth_token=7883c3577b06fb177e0259ab9f02c9411f9b1f092b22ceb787f5837d7e9ad196
  
  >  Test 4 : Payment section Awaiting payments : https://app-automate.browserstack.com/builds/a3c9398590f495110950a788c2239547bd9301c5/sessions/173791fa801abfa9aa8c4d59d4aa6637dc1eb2cb?auth_token=d83a9dfd1956cdb46b29b54146ad754486412a05d8a705d74b30ce0f0ee51f7b
+
+ >  Test 5(a) : Payment Due using Insta-money (Partial payment) : https://app-automate.browserstack.com/builds/1cecb3dbe4e358d6a77bfcaa9d4e747b5d7f72ce/sessions/bcb97f5a014c0a1a8d2e9dee0dbf152ada0758b4?auth_token=779ebcdff0c319ca4e59feedc12b630e879855cbbbca973a516135035e767f64
+
+ >  Test 5(b) : Payment Due using Insta-money (Full payment) : https://app-automate.browserstack.com/dashboard/v2/public-build/aGdoaE5VMjFtVEE2MEUzc3hiV0xkcFAreGtqNE1sSk8rKzhVMlBMU1dtWHo2N3ViRlJYUERWOWhqOGJEUzJmQzBQTGJTbFFGY3VQRXUyaEwrN0loZVE9PS0tbGxCSU9yTDNadmlXVEErVFpjL3VYdz09--765733d9ccb04ca0d60802ccd2299ae96db44936
